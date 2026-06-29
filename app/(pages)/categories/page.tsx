@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useState, useTransition, useCallback } from 'react';
+import React, { useCallback, useEffect, useState, useTransition } from 'react';
 import Link from 'next/link';
 import { ArrowLeft, Layers, RefreshCw } from 'lucide-react';
 import CategoryCard, { CategoryData as CardCategoryDataType } from '@/app/components/CategoryCard';

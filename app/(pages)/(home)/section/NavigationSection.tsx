@@ -3,8 +3,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
-import { Menu, X, ArrowUpRight } from 'lucide-react';
-import PrimaryButton from '@/app/components/PrimaryButton';
+import { Menu, X, MessageCircle } from 'lucide-react';
 
 export default function NavigationSection() {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,16 +12,17 @@ export default function NavigationSection() {
 
   const isLandingPage = pathname === '/';
 
-  // Core navigation configurations mapped against structural route actions
+
   const navLinks = [
     { name: 'Home', href: '/', isScroll: true },
     { name: 'Category', href: '/categories', isScroll: false },
     { name: 'About', href: '#about', isScroll: true },
-    { name: 'Products', href: '#features', isScroll: true }, // Targets the core feature checklist layout
+    { name: 'Products', href: '#features', isScroll: true },
     { name: 'Contact', href: '#contact', isScroll: true },
+    { name: 'Admin', href: '/studio', isScroll: false },
   ];
 
-  // Intercept scroll trigger to execute fallback routing safely if off-home
+
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string, isScroll: boolean) => {
     setIsOpen(false);
 
@@ -32,6 +32,9 @@ export default function NavigationSection() {
       router.push(`/${href}`);
     }
   };
+
+  // Centralized WhatsApp endpoint string assignment
+  const whatsappUrl = 'https://wa.me/919150040034';
 
   return (
     <nav className='sticky top-0 z-50 w-full border-b border-slate-200/80 bg-white/90 backdrop-blur-md'>
@@ -43,7 +46,7 @@ export default function NavigationSection() {
               href='/'
               className='flex items-center gap-2 outline-none'>
               <span className='font-clash text-brand-primary text-lg font-bold tracking-tight uppercase'>
-                Mass<span className='text-brand-secondary ml-1'>Spares</span>
+                Mass
               </span>
             </Link>
           </div>
@@ -61,17 +64,16 @@ export default function NavigationSection() {
             ))}
           </div>
 
-          {/* Right Column: CTA Trigger Node */}
+          {/* Right Column: WhatsApp CTA Trigger Node */}
           <div className='hidden items-center md:flex'>
-            <Link
-              href={isLandingPage ? '#contact' : '/#contact'}
-              onClick={(e) => handleNavClick(e, '#contact', true)}
-              className='outline-none'>
-              <PrimaryButton className='flex items-center gap-1.5 rounded-sm px-4 py-2 text-xs'>
-                Submit RFQ
-                <ArrowUpRight className='h-3.5 w-3.5' />
-              </PrimaryButton>
-            </Link>
+            <a
+              href={whatsappUrl}
+              target='_blank'
+              rel='noopener noreferrer'
+              className='inline-flex items-center gap-2 rounded-sm bg-[#25D366] px-4 py-2 text-xs font-bold tracking-wider text-white uppercase shadow-sm transition-transform duration-150 outline-none hover:bg-[#20ba56] active:scale-[0.98]'>
+              <MessageCircle className='h-4 w-4 fill-white' />
+              Chat On WhatsApp
+            </a>
           </div>
 
           {/* Mobile Shell Menu Toggle Button */}
@@ -99,15 +101,15 @@ export default function NavigationSection() {
             </Link>
           ))}
           <div className='pt-2'>
-            <Link
-              href={isLandingPage ? '#contact' : '/#contact'}
-              onClick={(e) => handleNavClick(e, '#contact', true)}
-              className='block w-full'>
-              <PrimaryButton className='flex w-full items-center justify-center gap-1.5 rounded-sm py-2.5 text-xs'>
-                Submit RFQ
-                <ArrowUpRight className='h-3.5 w-3.5' />
-              </PrimaryButton>
-            </Link>
+            <a
+              href={whatsappUrl}
+              target='_blank'
+              rel='noopener noreferrer'
+              onClick={() => setIsOpen(false)}
+              className='flex w-full items-center justify-center gap-2 rounded-sm bg-[#25D366] py-2.5 text-xs font-bold tracking-wider text-white uppercase shadow-sm transition-colors hover:bg-[#20ba56]'>
+              <MessageCircle className='h-4 w-4 fill-white' />
+              Chat On WhatsApp
+            </a>
           </div>
         </div>
       )}

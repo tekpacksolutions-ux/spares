@@ -63,7 +63,7 @@ export default function AboutSection() {
             {/* Primary Dominant Image Frame */}
             <div className='relative aspect-4/5 w-full overflow-hidden rounded-sm border border-slate-100 bg-slate-50 shadow-sm'>
               <Image
-                src='/image/ProductDemo.jpg'
+                src='/image/welder.jpg'
                 alt='Industrial processing and engineering manufacturing'
                 fill
                 sizes='(max-width: 1024px) 50vw, 33vw'
@@ -77,7 +77,7 @@ export default function AboutSection() {
             <div className='flex flex-col justify-between gap-4 pt-8'>
               <div className='relative aspect-square w-full flex-1 overflow-hidden rounded-sm border border-slate-100 bg-slate-50 shadow-sm'>
                 <Image
-                  src='/image/ProductDemo.jpg'
+                  src='/image/spare.webp'
                   alt='Precision component verification setup'
                   fill
                   sizes='(max-width: 1024px) 50vw, 33vw'
