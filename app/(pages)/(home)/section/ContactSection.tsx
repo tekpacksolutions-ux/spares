@@ -63,7 +63,7 @@ export default function ContactSection() {
                 Procurement & RFQ Hub
               </span>
               <h2 className='font-clash text-brand-primary text-2xl font-bold tracking-tight uppercase sm:text-4xl'>
-                Connect with Mass Spares
+                Connect with Mass
               </h2>
               <p className='mt-4 max-w-sm text-sm leading-relaxed font-normal text-slate-500'>
                 Submit your parts schedule, specifications, or request a volume quote. Our engineering desk will confirm

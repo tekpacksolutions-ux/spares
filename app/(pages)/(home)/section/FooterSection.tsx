@@ -66,8 +66,8 @@ export default function FooterSection() {
         <div className='grid grid-cols-1 gap-10 border-b border-slate-900 pb-12 md:grid-cols-4'>
           {/* Brand Frame Module */}
           <div className='md:col-span-1'>
-            <span className='font-clash text-lg font-bold tracking-tight uppercase'>
-              Mass<span className='text-brand-secondary'>Spares</span>
+            <span className='font-clash text-2xl font-bold tracking-tight uppercase'>
+              Mass
             </span>
             <p className='mt-4 max-w-xs text-xs leading-relaxed font-normal text-slate-400'>
               High-precision engineering and manufacturing of heavy-duty replacement spare parts custom balanced for
