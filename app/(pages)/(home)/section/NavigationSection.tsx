@@ -45,7 +45,7 @@ export default function NavigationSection() {
             <Link
               href='/'
               className='flex items-center gap-2 outline-none'>
-              <span className='font-clash text-brand-primary text-lg font-bold tracking-tight uppercase'>
+              <span className='font-clash text-brand-primary text-xl sm:text-3xl  font-bold tracking-wider uppercase'>
                 Mass
               </span>
             </Link>
