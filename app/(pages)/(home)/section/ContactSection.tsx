@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Send, Loader2, CheckCircle2, AlertCircle } from 'lucide-react';
+import { AlertCircle, CheckCircle2, Loader2, Mail, MapPin, Phone, Send } from 'lucide-react';
 import PrimaryButton from '@/app/components/PrimaryButton';
 
 export default function ContactSection() {
@@ -78,7 +78,10 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <p className='text-xs font-semibold tracking-wider text-slate-400 uppercase'>Direct Hotline</p>
-                    <p className='text-brand-primary mt-0.5 text-sm font-bold'>+91 (022) 555-0192</p>
+                    <div className={'flex gap-5 sm:text-xs'}>
+                      <p className='text-brand-primary mt-0.5 text-sm font-bold'>+91 91500 40034</p>
+                      <p className='text-brand-primary mt-0.5 text-sm font-bold'>+91 91500 40037</p>
+                    </div>
                   </div>
                 </div>
 
@@ -90,7 +93,7 @@ export default function ContactSection() {
                     <p className='text-xs font-semibold tracking-wider text-slate-400 uppercase'>
                       Technical Sales Email
                     </p>
-                    <p className='text-brand-primary mt-0.5 text-sm font-bold'>sales@massspares.com</p>
+                    <p className='text-brand-primary mt-0.5 text-sm font-bold'>mass.ind26@gmail.com</p>
                   </div>
                 </div>
 
@@ -101,9 +104,7 @@ export default function ContactSection() {
                   <div>
                     <p className='text-xs font-semibold tracking-wider text-slate-400 uppercase'>Distribution Hub</p>
                     <p className='text-brand-primary mt-0.5 text-sm leading-relaxed font-bold'>
-                      Plot 42, Industrial Engineering Zone,
-                      <br />
-                      Phase II, New Delhi, India
+                      149, Trichy Road, Cindhamanipudur, Pallapalayam, Coimbatore, Tamil Nadu — 641103
                     </p>
                   </div>
                 </div>
